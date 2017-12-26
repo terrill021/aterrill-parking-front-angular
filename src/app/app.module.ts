@@ -8,7 +8,10 @@ import {HttpClientModule} from '@angular/common/http';
 import {MessageService} from './message.service';
 import { FormsModule } from '@angular/forms';
 import {CashParkingService} from './cash-parking.service';
-
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule, MatCheckboxModule, MatFormField, MatSelect} from '@angular/material';
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
@@ -20,7 +23,12 @@ import {CashParkingService} from './cash-parking.service';
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatCheckboxModule,
+    MatInputModule,
+    MatSelectModule,
+    MatButtonModule
   ],
   providers: [ServiceRegisterVehicleService, MessageService, CashParkingService],
   bootstrap: [AppComponent]

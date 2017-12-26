@@ -1,10 +1,10 @@
 <div>
-  cash-parking works!
+  <h3>cash-parking works! </h3>
   
   <div>
-    <label>License plate:
-      <input [(ngModel)]="licensePlate" placeholder="licensePlate"/>
-    </label>
+    <mat-form-field>
+      <input matInput [(ngModel)]="licensePlate" placeholder="License Plate"/>
+    </mat-form-field>
   </div>
-  <button (click)="cashParking(licensePlate)">$Cash parking$</button>
+  <button mat-raised-button (click)="cashParking(licensePlate)">$Cash parking$</button>
 </div>
