@@ -1,18 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
 import { AppComponent } from './app.component';
+import { RegisterVehicleComponent } from './register-vehicle/register-vehicle.component';
+import {ServiceRegisterVehicleService} from './service-register-vehicle.service';
+import { CashParkingComponent } from './cash-parking/cash-parking.component';
+import {HttpClientModule} from '@angular/common/http';
+import {MessageService} from './message.service';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RegisterVehicleComponent,
+    CashParkingComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [ServiceRegisterVehicleService, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

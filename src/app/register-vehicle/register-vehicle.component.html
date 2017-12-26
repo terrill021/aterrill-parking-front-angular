@@ -1,0 +1,23 @@
+<div>
+  register-vehicle works!
+  
+  <div>
+    <label>License plate:
+      <input [(ngModel)]="vehicle.licensePlate" placeholder="License plate"/>
+    </label>
+  </div>  
+
+  <div>
+    <label>Displacement:
+      <input [(ngModel)]="vehicle.displacement" placeholder="Displacement"/>
+    </label>
+  </div>
+
+  <div>
+    <select  [(ngModel)]="vehicle.type" name="vehicleType" id="selVehicleType">
+      <option value="CAR">car</option>
+      <option value=" MOTORCYCLE">Motorcycle</option>
+    </select>
+  </div>
+  <button (click)="registerVehicle(vehicle)">Register Vehicle</button>
+</div>
