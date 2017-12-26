@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {CashParkingService} from '../cash-parking.service';
+import { Vehicle } from '../models/Vehicle.model';
+import { Response } from '../models/Response.model';
 
 @Component({
   selector: 'app-cash-parking',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CashParkingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private parkingService: CashParkingService) { }
 
   ngOnInit() {
   }
 
+  cashParking(licensePlate: Vehicle['licensePlate']) {
+    this.parkingService.cashParking(licensePlate)
+    .subscribe(response => {console.log(response); }
+    );
+  }
 }

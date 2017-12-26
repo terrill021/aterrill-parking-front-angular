@@ -1,8 +1,10 @@
 <div>
   cash-parking works!
+  
   <div>
-    <input type="text" id="licensePlate">
-    <label for="licensePlate"> License plate:</label>    
+    <label>License plate:
+      <input [(ngModel)]="licensePlate" placeholder="licensePlate"/>
+    </label>
   </div>
-  <button type="submit"> Cass parking</button>
+  <button (click)="cashParking(licensePlate)">$Cash parking$</button>
 </div>

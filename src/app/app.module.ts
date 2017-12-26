@@ -7,6 +7,7 @@ import { CashParkingComponent } from './cash-parking/cash-parking.component';
 import {HttpClientModule} from '@angular/common/http';
 import {MessageService} from './message.service';
 import { FormsModule } from '@angular/forms';
+import {CashParkingService} from './cash-parking.service';
 
 
 
@@ -21,7 +22,7 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule
   ],
-  providers: [ServiceRegisterVehicleService, MessageService],
+  providers: [ServiceRegisterVehicleService, MessageService, CashParkingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
