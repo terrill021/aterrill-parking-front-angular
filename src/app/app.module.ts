@@ -12,6 +12,11 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule, MatCheckboxModule, MatFormField, MatSelect} from '@angular/material';
 import {MatSelectModule} from '@angular/material/select';
+import { AppRoutingModule } from './/app-routing.module';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatIconModule} from '@angular/material/icon';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -28,7 +33,12 @@ import {MatSelectModule} from '@angular/material/select';
     MatCheckboxModule,
     MatInputModule,
     MatSelectModule,
-    MatButtonModule
+    MatButtonModule,
+    AppRoutingModule,
+    MatMenuModule,
+    MatIconModule,
+    MatCardModule,
+    MatTabsModule
   ],
   providers: [ServiceRegisterVehicleService, MessageService, CashParkingService],
   bootstrap: [AppComponent]

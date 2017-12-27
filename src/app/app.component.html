@@ -1,11 +1,11 @@
 <div>
-  <app-cash-parking></app-cash-parking>
-  <br/>
-  <br/>
-  <app-register-vehicle></app-register-vehicle>
-
-  <br/>
-  <br/>
-    
+    <mat-tab-group style="text-align: center">
+        <mat-tab label="cash parking">
+            <mat-card> <app-cash-parking></app-cash-parking> </mat-card>
+        </mat-tab>
+        <mat-tab label="Register Vehicle">
+            <mat-card><app-register-vehicle></app-register-vehicle></mat-card>
+        </mat-tab>
+    </mat-tab-group>
 </div>
 

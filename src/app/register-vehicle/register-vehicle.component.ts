@@ -1,7 +1,7 @@
 import { Component, OnInit, Input} from '@angular/core';
 import { ServiceRegisterVehicleService } from '../service-register-vehicle.service';
 import {Vehicle} from '../models/Vehicle.model';
-
+import swal from 'sweetalert2';
 @Component({
   selector: 'app-register-vehicle',
   templateUrl: './register-vehicle.component.html',
@@ -23,8 +23,13 @@ export class RegisterVehicleComponent implements OnInit {
 
   registerVehicle (vehicle: Vehicle): void {
     this.serviceRegister.addVehicle(vehicle)
-      .subscribe(hervehicle => {
-        console.log('Respuesta: ' + JSON.stringify(hervehicle.message));
+      .subscribe(response => {
+        swal({
+          title: 'Message',
+          text: response.message,
+          type: (response.error) ? 'error' : 'success',
+          confirmButtonText: 'ok'
+        });
       });
   }
 

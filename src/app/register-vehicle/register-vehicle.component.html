@@ -1,5 +1,5 @@
-<div >
-  <h3>register-vehicle works!</h3>
+<div class="example-container">
+  <h3>register vehicle</h3>
 
     <div>
       <mat-form-field>
@@ -17,11 +17,11 @@
     <mat-form-field>
     <mat-select  [(ngModel)]="vehicle.type" name="vehicleType" id="selVehicleType">
       <mat-option value="CAR">car</mat-option>
-      <mat-option value=" MOTORCYCLE">Motorcycle</mat-option>
+      <mat-option value="MOTORCYCLE">Motorcycle</mat-option>
     </mat-select>
   </mat-form-field>
   </div>
-  <button mat-raised-button (click)="registerVehicle(vehicle)">Register Vehicle</button>
-
-
+  <div>
+    <button mat-raised-button (click)="registerVehicle(vehicle)" style="width: 40%">Register Vehicle</button>
+  </div>
 </div>

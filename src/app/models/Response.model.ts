@@ -1,6 +1,6 @@
 export class Response {
 
-    public message: String;
+    public message: string;
     public error: boolean;
     public payload: any;
 

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import 'hammerjs';
-
+import {DomSanitizer} from '@angular/platform-browser';
+import {MatIconRegistry} from '@angular/material';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +9,5 @@ import 'hammerjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+
 }
