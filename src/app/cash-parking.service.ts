@@ -23,7 +23,7 @@ export class CashParkingService {
   cashParking (licensePlate: Vehicle['licensePlate']): Observable<Response> {
     return this.http.get<Response>(this.addVehicleUrl + licensePlate, httpOptions).pipe(
       tap((response: Response) => this.log(`added vehicle w/ id=${response.message}`) ),
-      catchError(this.handleError<Response>('addVehicle'))
+      catchError(this.handleError<Response>('addVehicle', Response.reponseError()))
     );
   }
 

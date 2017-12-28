@@ -6,6 +6,7 @@ import {ServiceRegisterVehicleService} from './service-register-vehicle.service'
 import { CashParkingComponent } from './cash-parking/cash-parking.component';
 import {HttpClientModule} from '@angular/common/http';
 import {MessageService} from './message.service';
+import {SearchVehiclesService} from './search-vehicles.service';
 import { FormsModule } from '@angular/forms';
 import {CashParkingService} from './cash-parking.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -17,13 +18,15 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatCardModule} from '@angular/material/card';
-
+import { ListVehiclesComponent } from './list-vehicles/list-vehicles.component';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterVehicleComponent,
-    CashParkingComponent
+    CashParkingComponent,
+    ListVehiclesComponent
   ],
   imports: [
     BrowserModule,
@@ -38,9 +41,10 @@ import {MatCardModule} from '@angular/material/card';
     MatMenuModule,
     MatIconModule,
     MatCardModule,
-    MatTabsModule
+    MatTabsModule,
+    MatListModule
   ],
-  providers: [ServiceRegisterVehicleService, MessageService, CashParkingService],
+  providers: [ServiceRegisterVehicleService, MessageService, CashParkingService, SearchVehiclesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

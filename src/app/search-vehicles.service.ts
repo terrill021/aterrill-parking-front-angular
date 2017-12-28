@@ -7,23 +7,22 @@ import { MessageService } from './message.service';
 import { of } from 'rxjs/observable/of';
 import {Response} from './models/Response.model';
 
-
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
 
 @Injectable()
-export class ServiceRegisterVehicleService {
+export class SearchVehiclesService {
 
-  private addVehicleUrl = 'http://127.0.0.1:1337/parking/21/vehicles';  // URL to web api
+  private searchVehiclesUrl = 'http://127.0.0.1:1337/parking/21/vehicles';  // URL to web api
 
   constructor( private http: HttpClient, private messageService: MessageService) { }
 
   /** POST: add a new hero to the server */
-  addVehicle (vehicle: Vehicle): Observable<Response> {
-    return this.http.post<Response>(this.addVehicleUrl, vehicle, httpOptions).pipe(
-      tap((response: Response) => this.log(`added vehicle w/ id=${response.message}`) ),
-      catchError(this.handleError<Response>('addVehicle', Response.reponseError()))
+  getVehicles (parkingId: string): Observable<Response> {
+    return this.http.get<Response>(this.searchVehiclesUrl, httpOptions).pipe(
+      tap((response: Response) => this.log(`Vehicles w/ ${response.message}`) ),
+      catchError(this.handleError<Response>('getVehicles', Response.reponseError()))
     );
   }
 
@@ -51,4 +50,5 @@ export class ServiceRegisterVehicleService {
   private log(message: string) {
     this.messageService.add('HeroService: ' + message);
   }
+
 }
